@@ -1,0 +1,12 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: nodejs-dev-docker-image:latest
+        container_name: nextjs-tutorial-app-container
+        volumes:
+            - .:/app
+        ports:
+            - "3001:3000"
+        tty: true
